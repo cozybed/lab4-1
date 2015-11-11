@@ -1,0 +1,179 @@
+{% load staticfiles %}
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Online Library</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="asd" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/static/js/simpleCart.min.js"> </script>
+<script src="/static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="/static/css/table_style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+<!--//webfont-->
+<script src="/static/js/jquery.easydropdown.js"></script>
+<!-- Add fancyBox main JS and CSS files -->
+<script src="/static/js/jquery.magnific-popup.js" type="text/javascript"></script>
+<link href="/static/css/magnific-popup.css" rel="stylesheet" type="text/css">
+		<script>
+			$(document).ready(function() {
+				$('.popup-with-zoom-anim').magnificPopup({
+					type: 'inline',
+					fixedContentPos: false,
+					fixedBgPos: true,
+					overflowY: 'auto',
+					closeBtnInside: true,
+					preloader: false,
+					midClick: true,
+					removalDelay: 300,
+					mainClass: 'my-mfp-zoom-in'
+			});
+		});
+		</script>
+</head>
+<body>
+<div class="header">	
+      <div class="container">
+          <div class="header-top">
+              <div class="logo">
+                  <a href="/book/"><h6>Online Library</h6><h2>System</h2></a>
+              </div>
+
+              <div class="clearfix"></div>
+          </div>
+		 <div class="banner_wrap">
+			<div class="bannertop_box">
+
+   		 		<div class="cart_bg">
+	   		 	  <ul class="cart">
+	   		 		 <a href="">
+					    <h4>Find all you need here</h4>
+					 </a>
+				     <div class="clearfix"> </div>
+                  </ul>
+	   		 	</div>
+			  	<ul class="quick_access">
+   		 			<div class='clearfix'></div>
+   		 		</ul>
+   		 		<div class="search">
+                    <form name="input" action="search" method="post">
+	  			   <input type="text" value="Search" name="Author" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+				   <input type="submit" value="">
+                    </form>
+	  			</div>
+                <div class="welcome_box">
+                    <h3>Welcome to the Library</h3>
+                    <p>this is a online system to manage the book</p>
+                </div>
+   		 	</div>
+   		 	<div class="banner_right">
+   		 		<h1><br><br></h1>
+   		 		<a href="/book/login/" class="banner_btn">Add new book</a>
+   		 	</div>
+   		 	<div class='clearfix'></div>
+	    </div>
+	   </div>
+	</div>
+	<div class="main">
+	  <div class="content_box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+
+
+				</div>
+			   <div class="col-md-9">
+				<h3 class="m_1">Latest Books</h3><hr>
+                   <div class="menu_box">
+
+                       <h3 class="menu_head">Menu</h3>
+
+                       {% if latest_book_list %}
+                       <ul class="nav">
+                           {% for book in latest_book_list %}
+                               <li><a href="books?ISBN={{ book.ISBN }}">{{ book.Title }}</a></li>
+                               <ul>
+                                   <li>ISBN: {{ book.ISBN }}</li>
+                                   <li>Author: {{ book.author.name }}</li>
+                                   <li>Publisher: {{ book.publisher }}</li>
+                                   <li>Publish Date: {{ book.publishDate }}</li>
+                                   <li>Price: {{ book.price }}</li>
+                               </ul>
+                           {% endfor %}
+                       </ul>
+                       {% else %}
+
+                       {% endif %}
+                   </div>
+
+
+			  </div>
+			</div>
+		 </div>
+		</div>
+		<div class="container">
+	    </div>
+    <div class="footer">
+		<div class="container">
+			<div class="footer-grid">
+				<h3></h3>
+				<ul class="list1">
+				  <li><a href="index.html"></a></li>
+				  <li><a href="/static/about.html"></a></li>
+				  <li><a href="/static/about.html"></a></li>
+				  <li><a href="/static/about.html"></a></li>
+				</ul>
+			</div>
+            <div class="footer-grid">
+                <h3></h3>
+                <ul class="list1">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3></h3>
+                <ul class="list1">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                </ul>
+            </div>
+            <div class="footer-grid">
+                <h3></h3>
+                <ul class="list1">
+                    <li><a href="index.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                    <li><a href="/static/about.html"></a></li>
+                </ul>
+            </div>
+			 <div class="clearfix"> </div>
+		</div>
+	</div>
+	<div class="footer_bottom">
+		<div class="container">
+			<div class="copy">
+			   <p>Copyright &copy; 2015 HIT. All Rights Reserved . Design by Leo </p>
+			</div>
+		</div>
+	</div>
+    </div>
+</body>
+</html>		
